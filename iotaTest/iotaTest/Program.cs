@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using RestSharp;
 using Tangle.Net.Cryptography;
@@ -13,6 +14,8 @@ namespace iotaTest
     {
         static void Main(string[] args)
         {
+            string basePath = Path.Combine(Environment.CurrentDirectory, "..", "..");
+            string text = File.ReadAllText(Path.Combine(basePath, "result.txt"));
             var repository = new RestIotaRepository(new RestClient("https://nodes.testnet.iota.org:443"));
             const string address = "THEBLOCKCHAINEDMOBILITYHACKATHONTHEBLOCKCHAINEDMOBILITYHACKATHONTHEBLOCKCHAINEDMO";
 

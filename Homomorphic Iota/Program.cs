@@ -38,6 +38,8 @@ namespace Homomorphic_Iota
                 File.AppendAllText(Path.Combine(basePath, destinationFile), $"lat: {Environment.NewLine}");
                 AppendAllBytes(Path.Combine(basePath, destinationFile), encryptedLat.ToArray());
                 File.AppendAllText(Path.Combine(basePath, destinationFile), $"{Environment.NewLine}");
+
+                break;
             }           
         }
 
