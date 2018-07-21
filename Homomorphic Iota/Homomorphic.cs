@@ -98,7 +98,7 @@ namespace Homomorphic_Iota
             return positionEncoded;
         }
 
-        private static FractionalEncoder GetEncoder(SEALContext context)
+        private FractionalEncoder GetEncoder(SEALContext context)
         {
             var encoder = new FractionalEncoder(context.PlainModulus, context.PolyModulus, 64, 32);
             return encoder;
@@ -123,15 +123,21 @@ namespace Homomorphic_Iota
             PositionEncrypted positionEncrypted = GetFromIota();
 
             evaluator.SubPlain(positionEncrypted.Lon, encoded.Lon);
+            evaluator.SubPlain(positionEncrypted.Lat, encoded.Lat);
 
             var decryptor = new Decryptor(GetContext(), GetSecretKey());
-            Plaintext plainResult = new Plaintext();
-            decryptor.Decrypt(positionEncrypted.Lon, plainResult);
+            Plaintext plainResultLon = new Plaintext();
+            Plaintext plainResultLat = new Plaintext();
+            decryptor.Decrypt(positionEncrypted.Lon, plainResultLon);
+            decryptor.Decrypt(positionEncrypted.Lat, plainResultLat);
+
             var value = decryptor.InvariantNoiseBudget(positionEncrypted.Lon);
             var encoder = GetEncoder(GetContext());
-            double result = encoder.Decode(plainResult);
+            double resultLon = encoder.Decode(plainResultLon);
+            double resultLat = encoder.Decode(plainResultLat);
 
-            if(result < 1)
+            var diff = Math.Abs(resultLon) + Math.Abs(resultLat);
+            if (diff < 0.007)
                 return true;
 
             return false;
