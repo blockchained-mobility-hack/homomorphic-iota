@@ -1,0 +1,863 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly SEALNET, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class Microsoft.Research.SEAL.BigUInt: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.BigUInt): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.ValueType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, UInt64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IEquatable`1[Microsoft.Research.SEAL.BigUInt]
+    System.IComparable`1[Microsoft.Research.SEAL.BigUInt]
+    System.IDisposable
+  Properties:
+    Byte Item [Int32] 'get set' : 
+    Boolean IsZero 'get ' : 
+    UInt64* Pointer 'get ' : 
+    Int32 UInt64Count 'get ' : 
+    Int32 ByteCount 'get ' : 
+    Int32 BitCount 'get ' : 
+    Boolean IsAlias 'get ' : 
+  Methods:
+    get_IsAlias(): PrivateScope, Public, HideBySig, SpecialName
+    get_BitCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_ByteCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_UInt64Count(): PrivateScope, Public, HideBySig, SpecialName
+    get_Pointer(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsZero(): PrivateScope, Public, HideBySig, SpecialName
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, Byte): PrivateScope, Public, HideBySig, SpecialName
+    GetSignificantBitCount(): PrivateScope, Public, HideBySig
+    Set(UInt64): PrivateScope, Public, HideBySig
+    Set(String): PrivateScope, Public, HideBySig
+    Set(BigUInt): PrivateScope, Public, HideBySig
+    SetZero(): PrivateScope, Public, HideBySig
+    Save(Stream): PrivateScope, Public, HideBySig
+    Load(Stream): PrivateScope, Public, HideBySig
+    Resize(Int32): PrivateScope, Public, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    Equals(BigUInt): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ToBigInteger(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    ToDecimalString(): PrivateScope, Public, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    CompareTo(UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    CompareTo(BigUInt): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    DivideRemainder(UInt64, BigUInt): PrivateScope, Public, HideBySig
+    DivideRemainder(BigUInt, BigUInt): PrivateScope, Public, HideBySig
+    ModuloInvert(UInt64): PrivateScope, Public, HideBySig
+    ModuloInvert(BigUInt): PrivateScope, Public, HideBySig
+    TryModuloInvert(UInt64, BigUInt): PrivateScope, Public, HideBySig
+    TryModuloInvert(BigUInt, BigUInt): PrivateScope, Public, HideBySig
+    op_Addition(BigUInt, UInt64): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Addition(BigUInt, BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_UnaryPlus(BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Subtraction(BigUInt, UInt64): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Subtraction(BigUInt, BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_UnaryNegation(BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_OnesComplement(BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Increment(BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Decrement(BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Multiply(BigUInt, UInt64): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Multiply(BigUInt, BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Division(BigUInt, UInt64): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Division(BigUInt, BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Modulus(BigUInt, UInt64): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Modulus(BigUInt, BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_ExclusiveOr(BigUInt, UInt64): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_ExclusiveOr(BigUInt, BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_BitwiseAnd(BigUInt, UInt64): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_BitwiseAnd(BigUInt, BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_BitwiseOr(BigUInt, UInt64): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_BitwiseOr(BigUInt, BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_LeftShift(BigUInt, Int32): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_RightShift(BigUInt, Int32): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Explicit(BigUInt): PrivateScope, Public, Static, HideBySig, SpecialName
+    Of(UInt64): PrivateScope, Public, Static, HideBySig
+    GetUInt(): PrivateScope, Public, HideBySig
+    DuplicateTo(BigUInt): PrivateScope, Public, HideBySig
+    DuplicateFrom(BigUInt): PrivateScope, Public, HideBySig
+    op_Implicit(String): PrivateScope, Public, Static, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.BigPoly: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.BigPoly): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IEquatable`1[Microsoft.Research.SEAL.BigPoly]
+    System.IDisposable
+  Properties:
+    Microsoft.Research.SEAL.BigUInt Item [Int32] 'get ' : 
+    Boolean IsZero 'get ' : 
+    UInt64* Pointer 'get ' : 
+    Int32 CoeffUInt64Count 'get ' : 
+    Int32 UInt64Count 'get ' : 
+    Int32 CoeffBitCount 'get ' : 
+    Int32 CoeffCount 'get ' : 
+    Boolean IsAlias 'get ' : 
+  Methods:
+    get_IsAlias(): PrivateScope, Public, HideBySig, SpecialName
+    get_CoeffCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_CoeffBitCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_UInt64Count(): PrivateScope, Public, HideBySig, SpecialName
+    get_CoeffUInt64Count(): PrivateScope, Public, HideBySig, SpecialName
+    get_Pointer(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsZero(): PrivateScope, Public, HideBySig, SpecialName
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    GetSignificantCoeffCount(): PrivateScope, Public, HideBySig
+    GetSignificantCoeffBitCount(): PrivateScope, Public, HideBySig
+    Set(String): PrivateScope, Public, HideBySig
+    Set(BigPoly): PrivateScope, Public, HideBySig
+    SetZero(Int32, Int32): PrivateScope, Public, HideBySig
+    SetZero(Int32): PrivateScope, Public, HideBySig
+    SetZero(): PrivateScope, Public, HideBySig
+    Save(Stream): PrivateScope, Public, HideBySig
+    Load(Stream): PrivateScope, Public, HideBySig
+    Resize(Int32, Int32): PrivateScope, Public, HideBySig
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    Equals(BigPoly): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    GetPolynomial(): PrivateScope, Public, HideBySig
+    DuplicateTo(BigPoly): PrivateScope, Public, HideBySig
+    DuplicateFrom(BigPoly): PrivateScope, Public, HideBySig
+    op_Implicit(String): PrivateScope, Public, Static, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.BigPolyArray: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.BigPolyArray): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IEquatable`1[Microsoft.Research.SEAL.BigPolyArray]
+    System.IDisposable
+  Properties:
+    Boolean IsZero 'get ' : 
+    Microsoft.Research.SEAL.BigPoly Item [Int32] 'get ' : 
+    Int32 CoeffUInt64Count 'get ' : 
+    Int32 CoeffBitCount 'get ' : 
+    Int32 CoeffCount 'get ' : 
+    Int32 Size 'get ' : 
+  Methods:
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    get_CoeffCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_CoeffBitCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_CoeffUInt64Count(): PrivateScope, Public, HideBySig, SpecialName
+    PolyUInt64Count(): PrivateScope, Public, HideBySig
+    UInt64Count(): PrivateScope, Public, HideBySig
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    Equals(BigPolyArray): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_IsZero(): PrivateScope, Public, HideBySig, SpecialName
+    SetZero(Int32): PrivateScope, Public, HideBySig
+    SetZero(): PrivateScope, Public, HideBySig
+    Resize(Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    Reset(): PrivateScope, Public, HideBySig
+    Set(BigPolyArray): PrivateScope, Public, HideBySig
+    Save(Stream): PrivateScope, Public, HideBySig
+    Load(Stream): PrivateScope, Public, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    GetArray(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.SmallModulus: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.SmallModulus): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(UInt64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IEquatable`1[Microsoft.Research.SEAL.SmallModulus]
+    System.IEquatable`1[System.UInt64]
+    System.IDisposable
+  Properties:
+    Boolean IsZero 'get ' : 
+    System.Tuple`3[System.UInt64,System.UInt64,System.UInt64] ConstRatio 'get ' : 
+    UInt64 Value 'get ' : 
+    Int32 UInt64Count 'get ' : 
+    Int32 BitCount 'get ' : 
+  Methods:
+    Set(UInt64): PrivateScope, Public, HideBySig
+    Set(SmallModulus): PrivateScope, Public, HideBySig
+    get_BitCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_UInt64Count(): PrivateScope, Public, HideBySig, SpecialName
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    get_ConstRatio(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsZero(): PrivateScope, Public, HideBySig, SpecialName
+    Save(Stream): PrivateScope, Public, HideBySig
+    Load(Stream): PrivateScope, Public, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Equals(UInt64): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    Equals(SmallModulus): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    op_Implicit(UInt64): PrivateScope, Public, Static, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.MemoryPoolHandle: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.MemoryPoolHandle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    UInt64 AllocByteCount 'get ' : 
+    UInt64 AllocUInt64Count 'get ' : 
+    UInt64 PoolCount 'get ' : 
+  Methods:
+    Set(MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Global(): PrivateScope, Public, Static, HideBySig
+    New(): PrivateScope, Public, Static, HideBySig
+    get_PoolCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_AllocUInt64Count(): PrivateScope, Public, HideBySig, SpecialName
+    get_AllocByteCount(): PrivateScope, Public, HideBySig, SpecialName
+    op_Implicit(MemoryPoolHandle): PrivateScope, Public, Static, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.EncryptionParameters: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.EncryptionParameters): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IEquatable`1[Microsoft.Research.SEAL.EncryptionParameters]
+    System.IDisposable
+  Properties:
+    System.Tuple`4[System.UInt64,System.UInt64,System.UInt64,System.UInt64] HashBlock 'get ' : 
+    Double NoiseMaxDeviation 'get ' : 
+    Double NoiseStandardDeviation 'get set' : 
+    Microsoft.Research.SEAL.SmallModulus PlainModulus 'get set' : 
+    System.Collections.Generic.List`1[Microsoft.Research.SEAL.SmallModulus] CoeffModulus 'get set' : 
+    Microsoft.Research.SEAL.BigPoly PolyModulus 'get set' : 
+  Methods:
+    Set(EncryptionParameters): PrivateScope, Public, HideBySig
+    get_PolyModulus(): PrivateScope, Public, HideBySig, SpecialName
+    set_PolyModulus(BigPoly): PrivateScope, Public, HideBySig, SpecialName
+    get_CoeffModulus(): PrivateScope, Public, HideBySig, SpecialName
+    set_CoeffModulus(List`1): PrivateScope, Public, HideBySig, SpecialName
+    get_PlainModulus(): PrivateScope, Public, HideBySig, SpecialName
+    set_PlainModulus(SmallModulus): PrivateScope, Public, HideBySig, SpecialName
+    get_NoiseStandardDeviation(): PrivateScope, Public, HideBySig, SpecialName
+    set_NoiseStandardDeviation(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_NoiseMaxDeviation(): PrivateScope, Public, HideBySig, SpecialName
+    Save(Stream): PrivateScope, Public, HideBySig
+    Load(Stream): PrivateScope, Public, HideBySig
+    get_HashBlock(): PrivateScope, Public, HideBySig, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    Equals(EncryptionParameters): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.EncryptionParameterQualifiers: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Boolean EnableFastPlainLift 'get ' : 
+    Boolean EnableBatching 'get ' : 
+    Boolean EnableNTT 'get ' : 
+    Boolean EnableFFT 'get ' : 
+    Boolean ParametersSet 'get ' : 
+  Methods:
+    get_ParametersSet(): PrivateScope, Public, HideBySig, SpecialName
+    get_EnableFFT(): PrivateScope, Public, HideBySig, SpecialName
+    get_EnableNTT(): PrivateScope, Public, HideBySig, SpecialName
+    get_EnableBatching(): PrivateScope, Public, HideBySig, SpecialName
+    get_EnableFastPlainLift(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.SEALContext: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.SEALContext): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.EncryptionParameters): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Microsoft.Research.SEAL.BigUInt TotalCoeffModulus 'get ' : 
+    Double NoiseMaxDeviation 'get ' : 
+    Double NoiseStandardDeviation 'get ' : 
+    Microsoft.Research.SEAL.SmallModulus PlainModulus 'get ' : 
+    System.Collections.Generic.List`1[Microsoft.Research.SEAL.SmallModulus] CoeffModulus 'get ' : 
+    Microsoft.Research.SEAL.BigPoly PolyModulus 'get ' : 
+    Microsoft.Research.SEAL.EncryptionParameterQualifiers Qualifiers 'get ' : 
+    Microsoft.Research.SEAL.EncryptionParameters Parms 'get ' : 
+  Methods:
+    get_Parms(): PrivateScope, Public, HideBySig, SpecialName
+    get_Qualifiers(): PrivateScope, Public, HideBySig, SpecialName
+    get_PolyModulus(): PrivateScope, Public, HideBySig, SpecialName
+    get_CoeffModulus(): PrivateScope, Public, HideBySig, SpecialName
+    get_PlainModulus(): PrivateScope, Public, HideBySig, SpecialName
+    get_NoiseStandardDeviation(): PrivateScope, Public, HideBySig, SpecialName
+    get_NoiseMaxDeviation(): PrivateScope, Public, HideBySig, SpecialName
+    get_TotalCoeffModulus(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.Ciphertext: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.Ciphertext): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.EncryptionParameters, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.EncryptionParameters, Int32, Microsoft.Research.SEAL.MemoryPoolHandle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.EncryptionParameters): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.EncryptionParameters, Microsoft.Research.SEAL.MemoryPoolHandle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.MemoryPoolHandle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.Tuple`4[System.UInt64,System.UInt64,System.UInt64,System.UInt64] HashBlock 'get ' : 
+    Int32 UInt64Count 'get ' : 
+    Int32 UInt64CountCapacity 'get ' : 
+    Int32 Size 'get ' : 
+    Int32 SizeCapacity 'get ' : 
+    Int32 PolyCoeffCount 'get ' : 
+    Int32 CoeffModCount 'get ' : 
+    UInt64 Item [Int32] 'get ' : 
+  Methods:
+    Reserve(Int32): PrivateScope, Public, HideBySig
+    Reserve(Int32, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Reserve(EncryptionParameters, Int32): PrivateScope, Public, HideBySig
+    Reserve(EncryptionParameters, Int32, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Release(): PrivateScope, Public, HideBySig
+    Set(Ciphertext): PrivateScope, Public, HideBySig
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_CoeffModCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_PolyCoeffCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_SizeCapacity(): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    get_UInt64CountCapacity(): PrivateScope, Public, HideBySig, SpecialName
+    get_UInt64Count(): PrivateScope, Public, HideBySig, SpecialName
+    Save(Stream): PrivateScope, Public, HideBySig
+    Load(Stream): PrivateScope, Public, HideBySig
+    get_HashBlock(): PrivateScope, Public, HideBySig, SpecialName
+    Pool(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.EvaluationKeys: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.EvaluationKeys): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.Tuple`4[System.UInt64,System.UInt64,System.UInt64,System.UInt64] HashBlock 'get ' : 
+    System.Collections.Generic.List`1[System.Collections.Generic.List`1[Microsoft.Research.SEAL.Ciphertext]] Data 'get ' : 
+    Int32 DecompositionBitCount 'get ' : 
+    Int32 Size 'get ' : 
+  Methods:
+    Set(EvaluationKeys): PrivateScope, Public, HideBySig
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    get_DecompositionBitCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    Key(Int32): PrivateScope, Public, HideBySig
+    HasKey(Int32): PrivateScope, Public, HideBySig
+    get_HashBlock(): PrivateScope, Public, HideBySig, SpecialName
+    Save(Stream): PrivateScope, Public, HideBySig
+    Load(Stream): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.GaloisKeys: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.GaloisKeys): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.Tuple`4[System.UInt64,System.UInt64,System.UInt64,System.UInt64] HashBlock 'get ' : 
+    System.Collections.Generic.List`1[System.Collections.Generic.List`1[Microsoft.Research.SEAL.Ciphertext]] Data 'get ' : 
+    Int32 DecompositionBitCount 'get ' : 
+    Int32 Size 'get ' : 
+  Methods:
+    Set(GaloisKeys): PrivateScope, Public, HideBySig
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    get_DecompositionBitCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    Key(UInt64): PrivateScope, Public, HideBySig
+    HasKey(UInt64): PrivateScope, Public, HideBySig
+    get_HashBlock(): PrivateScope, Public, HideBySig, SpecialName
+    Save(Stream): PrivateScope, Public, HideBySig
+    Load(Stream): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.Plaintext: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.Plaintext): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Microsoft.Research.SEAL.MemoryPoolHandle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.BigPoly): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.BigPoly, Microsoft.Research.SEAL.MemoryPoolHandle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32, Microsoft.Research.SEAL.MemoryPoolHandle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Microsoft.Research.SEAL.MemoryPoolHandle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.MemoryPoolHandle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IEquatable`1[Microsoft.Research.SEAL.Plaintext]
+    System.IDisposable
+  Properties:
+    Int32 CoeffCount 'get ' : 
+    Int32 Capacity 'get ' : 
+    Boolean IsZero 'get ' : 
+    UInt64 Item [Int32] 'get set' : 
+  Methods:
+    Reserve(Int32): PrivateScope, Public, HideBySig
+    Reserve(Int32, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Release(): PrivateScope, Public, HideBySig
+    Resize(Int32): PrivateScope, Public, HideBySig
+    Resize(Int32, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Set(UInt64): PrivateScope, Public, HideBySig
+    Set(String): PrivateScope, Public, HideBySig
+    Set(BigPoly): PrivateScope, Public, HideBySig
+    Set(Plaintext): PrivateScope, Public, HideBySig
+    SetZero(): PrivateScope, Public, HideBySig
+    SetZero(Int32): PrivateScope, Public, HideBySig
+    SetZero(Int32, Int32): PrivateScope, Public, HideBySig
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, UInt64): PrivateScope, Public, HideBySig, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+    Equals(Plaintext): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_IsZero(): PrivateScope, Public, HideBySig, SpecialName
+    get_Capacity(): PrivateScope, Public, HideBySig, SpecialName
+    get_CoeffCount(): PrivateScope, Public, HideBySig, SpecialName
+    SignificantCoeffCount(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetHashCode(): PrivateScope, Public, Virtual, HideBySig
+    Save(Stream): PrivateScope, Public, HideBySig
+    Load(Stream): PrivateScope, Public, HideBySig
+    Pool(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.Evaluator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.Evaluator): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SEALContext): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Negate(Ciphertext, Ciphertext): PrivateScope, Public, HideBySig
+    Negate(Ciphertext): PrivateScope, Public, HideBySig
+    Add(Ciphertext, Ciphertext, Ciphertext): PrivateScope, Public, HideBySig
+    Add(Ciphertext, Ciphertext): PrivateScope, Public, HideBySig
+    AddMany(List`1, Ciphertext): PrivateScope, Public, HideBySig
+    Sub(Ciphertext, Ciphertext, Ciphertext): PrivateScope, Public, HideBySig
+    Sub(Ciphertext, Ciphertext): PrivateScope, Public, HideBySig
+    Multiply(Ciphertext, Ciphertext, Ciphertext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Multiply(Ciphertext, Ciphertext, Ciphertext): PrivateScope, Public, HideBySig
+    Multiply(Ciphertext, Ciphertext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Multiply(Ciphertext, Ciphertext): PrivateScope, Public, HideBySig
+    Square(Ciphertext, Ciphertext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Square(Ciphertext, Ciphertext): PrivateScope, Public, HideBySig
+    Square(Ciphertext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Square(Ciphertext): PrivateScope, Public, HideBySig
+    Relinearize(Ciphertext, EvaluationKeys, Ciphertext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Relinearize(Ciphertext, EvaluationKeys, Ciphertext): PrivateScope, Public, HideBySig
+    Relinearize(Ciphertext, EvaluationKeys): PrivateScope, Public, HideBySig
+    Relinearize(Ciphertext, EvaluationKeys, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    MultiplyMany(List`1, EvaluationKeys, Ciphertext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    MultiplyMany(List`1, EvaluationKeys, Ciphertext): PrivateScope, Public, HideBySig
+    Exponentiate(Ciphertext, UInt64, EvaluationKeys, Ciphertext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Exponentiate(Ciphertext, UInt64, EvaluationKeys, Ciphertext): PrivateScope, Public, HideBySig
+    Exponentiate(Ciphertext, UInt64, EvaluationKeys): PrivateScope, Public, HideBySig
+    Exponentiate(Ciphertext, UInt64, EvaluationKeys, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    AddPlain(Ciphertext, Plaintext, Ciphertext): PrivateScope, Public, HideBySig
+    AddPlain(Ciphertext, Plaintext): PrivateScope, Public, HideBySig
+    SubPlain(Ciphertext, Plaintext, Ciphertext): PrivateScope, Public, HideBySig
+    SubPlain(Ciphertext, Plaintext): PrivateScope, Public, HideBySig
+    MultiplyPlain(Ciphertext, Plaintext, Ciphertext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    MultiplyPlain(Ciphertext, Plaintext, Ciphertext): PrivateScope, Public, HideBySig
+    MultiplyPlain(Ciphertext, Plaintext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    MultiplyPlain(Ciphertext, Plaintext): PrivateScope, Public, HideBySig
+    TransformToNTT(Ciphertext, Ciphertext): PrivateScope, Public, HideBySig
+    TransformToNTT(Ciphertext): PrivateScope, Public, HideBySig
+    TransformToNTT(Plaintext, Plaintext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    TransformToNTT(Plaintext, Plaintext): PrivateScope, Public, HideBySig
+    TransformToNTT(Plaintext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    TransformToNTT(Plaintext): PrivateScope, Public, HideBySig
+    TransformFromNTT(Ciphertext, Ciphertext): PrivateScope, Public, HideBySig
+    TransformFromNTT(Ciphertext): PrivateScope, Public, HideBySig
+    MultiplyPlainNTT(Ciphertext, Plaintext): PrivateScope, Public, HideBySig
+    MultiplyPlainNTT(Ciphertext, Plaintext, Ciphertext): PrivateScope, Public, HideBySig
+    ApplyGalois(Ciphertext, UInt64, GaloisKeys, Ciphertext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    ApplyGalois(Ciphertext, UInt64, GaloisKeys, Ciphertext): PrivateScope, Public, HideBySig
+    ApplyGalois(Ciphertext, UInt64, GaloisKeys, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    ApplyGalois(Ciphertext, UInt64, GaloisKeys): PrivateScope, Public, HideBySig
+    RotateRows(Ciphertext, Int32, GaloisKeys, Ciphertext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    RotateRows(Ciphertext, Int32, GaloisKeys, Ciphertext): PrivateScope, Public, HideBySig
+    RotateRows(Ciphertext, Int32, GaloisKeys, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    RotateRows(Ciphertext, Int32, GaloisKeys): PrivateScope, Public, HideBySig
+    RotateColumns(Ciphertext, GaloisKeys, Ciphertext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    RotateColumns(Ciphertext, GaloisKeys, Ciphertext): PrivateScope, Public, HideBySig
+    RotateColumns(Ciphertext, GaloisKeys, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    RotateColumns(Ciphertext, GaloisKeys): PrivateScope, Public, HideBySig
+    GetEvaluator(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.Simulation: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.EncryptionParameters, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Int32 Size 'get ' : 
+    Int32 InvariantNoiseBudget 'get ' : 
+  Methods:
+    get_InvariantNoiseBudget(): PrivateScope, Public, HideBySig, SpecialName
+    Decrypts(Int32): PrivateScope, Public, HideBySig
+    Decrypts(): PrivateScope, Public, HideBySig
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.SimulationEvaluator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    GetFresh(EncryptionParameters, Int32, UInt64): PrivateScope, Public, HideBySig
+    Negate(Simulation): PrivateScope, Public, HideBySig
+    Add(Simulation, Simulation): PrivateScope, Public, HideBySig
+    AddMany(List`1): PrivateScope, Public, HideBySig
+    Sub(Simulation, Simulation): PrivateScope, Public, HideBySig
+    AddPlain(Simulation, Int32, UInt64): PrivateScope, Public, HideBySig
+    SubPlain(Simulation, Int32, UInt64): PrivateScope, Public, HideBySig
+    MultiplyPlain(Simulation, Int32, UInt64): PrivateScope, Public, HideBySig
+    Multiply(Simulation, Simulation): PrivateScope, Public, HideBySig
+    Square(Simulation): PrivateScope, Public, HideBySig
+    Exponentiate(Simulation, UInt64, Int32): PrivateScope, Public, HideBySig
+    MultiplyMany(List`1, Int32): PrivateScope, Public, HideBySig
+    Relinearize(Simulation, Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.BinaryEncoder: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.BinaryEncoder): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SmallModulus): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    UInt64 Base 'get ' : 
+    Microsoft.Research.SEAL.SmallModulus PlainModulus 'get ' : 
+  Methods:
+    get_PlainModulus(): PrivateScope, Public, HideBySig, SpecialName
+    get_Base(): PrivateScope, Public, HideBySig, SpecialName
+    Encode(UInt32, Plaintext): PrivateScope, Public, HideBySig
+    Encode(Int32, Plaintext): PrivateScope, Public, HideBySig
+    Encode(UInt32): PrivateScope, Public, HideBySig
+    Encode(Int32): PrivateScope, Public, HideBySig
+    Encode(Int64, Plaintext): PrivateScope, Public, HideBySig
+    Encode(Int64): PrivateScope, Public, HideBySig
+    Encode(BigUInt, Plaintext): PrivateScope, Public, HideBySig
+    Encode(BigUInt): PrivateScope, Public, HideBySig
+    Encode(UInt64, Plaintext): PrivateScope, Public, HideBySig
+    Encode(UInt64): PrivateScope, Public, HideBySig
+    DecodeUInt64(Plaintext): PrivateScope, Public, HideBySig
+    DecodeUInt32(Plaintext): PrivateScope, Public, HideBySig
+    DecodeInt64(Plaintext): PrivateScope, Public, HideBySig
+    DecodeInt32(Plaintext): PrivateScope, Public, HideBySig
+    DecodeBigUInt(Plaintext, BigUInt): PrivateScope, Public, HideBySig
+    DecodeBigUInt(Plaintext): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.BalancedEncoder: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.BalancedEncoder): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SmallModulus, UInt64, Microsoft.Research.SEAL.MemoryPoolHandle): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SmallModulus, UInt64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SmallModulus): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    UInt64 Base 'get ' : 
+    Microsoft.Research.SEAL.SmallModulus PlainModulus 'get ' : 
+  Methods:
+    get_PlainModulus(): PrivateScope, Public, HideBySig, SpecialName
+    get_Base(): PrivateScope, Public, HideBySig, SpecialName
+    Encode(UInt32, Plaintext): PrivateScope, Public, HideBySig
+    Encode(Int32, Plaintext): PrivateScope, Public, HideBySig
+    Encode(UInt32): PrivateScope, Public, HideBySig
+    Encode(Int32): PrivateScope, Public, HideBySig
+    Encode(Int64, Plaintext): PrivateScope, Public, HideBySig
+    Encode(Int64): PrivateScope, Public, HideBySig
+    Encode(BigUInt, Plaintext): PrivateScope, Public, HideBySig
+    Encode(BigUInt): PrivateScope, Public, HideBySig
+    Encode(UInt64, Plaintext): PrivateScope, Public, HideBySig
+    Encode(UInt64): PrivateScope, Public, HideBySig
+    DecodeUInt64(Plaintext): PrivateScope, Public, HideBySig
+    DecodeUInt32(Plaintext): PrivateScope, Public, HideBySig
+    DecodeInt64(Plaintext): PrivateScope, Public, HideBySig
+    DecodeInt32(Plaintext): PrivateScope, Public, HideBySig
+    DecodeBigUInt(Plaintext, BigUInt): PrivateScope, Public, HideBySig
+    DecodeBigUInt(Plaintext): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.BinaryFractionalEncoder: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.BinaryFractionalEncoder): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SmallModulus, Microsoft.Research.SEAL.BigPoly, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    UInt64 Base 'get ' : 
+    Int32 IntegerCoeffCount 'get ' : 
+    Int32 FractionCoeffCount 'get ' : 
+    Microsoft.Research.SEAL.BigPoly PolyModulus 'get ' : 
+    Microsoft.Research.SEAL.SmallModulus PlainModulus 'get ' : 
+  Methods:
+    Encode(Double): PrivateScope, Public, HideBySig
+    Decode(Plaintext): PrivateScope, Public, HideBySig
+    get_PlainModulus(): PrivateScope, Public, HideBySig, SpecialName
+    get_PolyModulus(): PrivateScope, Public, HideBySig, SpecialName
+    get_FractionCoeffCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_IntegerCoeffCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_Base(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.BalancedFractionalEncoder: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.BalancedFractionalEncoder): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SmallModulus, Microsoft.Research.SEAL.BigPoly, Int32, Int32, UInt64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SmallModulus, Microsoft.Research.SEAL.BigPoly, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    UInt64 Base 'get ' : 
+    Int32 IntegerCoeffCount 'get ' : 
+    Int32 FractionCoeffCount 'get ' : 
+    Microsoft.Research.SEAL.BigPoly PolyModulus 'get ' : 
+    Microsoft.Research.SEAL.SmallModulus PlainModulus 'get ' : 
+  Methods:
+    Encode(Double): PrivateScope, Public, HideBySig
+    Decode(Plaintext): PrivateScope, Public, HideBySig
+    get_PlainModulus(): PrivateScope, Public, HideBySig, SpecialName
+    get_PolyModulus(): PrivateScope, Public, HideBySig, SpecialName
+    get_FractionCoeffCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_IntegerCoeffCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_Base(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.IntegerEncoder: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.IntegerEncoder): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SmallModulus, UInt64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SmallModulus): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    UInt64 Base 'get ' : 
+    Microsoft.Research.SEAL.SmallModulus PlainModulus 'get ' : 
+  Methods:
+    get_PlainModulus(): PrivateScope, Public, HideBySig, SpecialName
+    get_Base(): PrivateScope, Public, HideBySig, SpecialName
+    Encode(UInt32, Plaintext): PrivateScope, Public, HideBySig
+    Encode(Int32, Plaintext): PrivateScope, Public, HideBySig
+    Encode(UInt32): PrivateScope, Public, HideBySig
+    Encode(Int32): PrivateScope, Public, HideBySig
+    Encode(Int64, Plaintext): PrivateScope, Public, HideBySig
+    Encode(Int64): PrivateScope, Public, HideBySig
+    Encode(BigUInt, Plaintext): PrivateScope, Public, HideBySig
+    Encode(BigUInt): PrivateScope, Public, HideBySig
+    Encode(UInt64, Plaintext): PrivateScope, Public, HideBySig
+    Encode(UInt64): PrivateScope, Public, HideBySig
+    DecodeUInt64(Plaintext): PrivateScope, Public, HideBySig
+    DecodeUInt32(Plaintext): PrivateScope, Public, HideBySig
+    DecodeInt64(Plaintext): PrivateScope, Public, HideBySig
+    DecodeInt32(Plaintext): PrivateScope, Public, HideBySig
+    DecodeBigUInt(Plaintext, BigUInt): PrivateScope, Public, HideBySig
+    DecodeBigUInt(Plaintext): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.FractionalEncoder: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.FractionalEncoder): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SmallModulus, Microsoft.Research.SEAL.BigPoly, Int32, Int32, UInt64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SmallModulus, Microsoft.Research.SEAL.BigPoly, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    UInt64 Base 'get ' : 
+    Int32 IntegerCoeffCount 'get ' : 
+    Int32 FractionCoeffCount 'get ' : 
+    Microsoft.Research.SEAL.BigPoly PolyModulus 'get ' : 
+    Microsoft.Research.SEAL.SmallModulus PlainModulus 'get ' : 
+  Methods:
+    Encode(Double): PrivateScope, Public, HideBySig
+    Decode(Plaintext): PrivateScope, Public, HideBySig
+    get_PlainModulus(): PrivateScope, Public, HideBySig, SpecialName
+    get_PolyModulus(): PrivateScope, Public, HideBySig, SpecialName
+    get_FractionCoeffCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_IntegerCoeffCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_Base(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.ChooserPoly: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.ChooserPoly): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, UInt64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    UInt64 MaxAbsValue 'get set' : 
+    Int32 MaxCoeffCount 'get set' : 
+  Methods:
+    Set(ChooserPoly): PrivateScope, Public, HideBySig
+    get_MaxCoeffCount(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxCoeffCount(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxAbsValue(): PrivateScope, Public, HideBySig, SpecialName
+    set_MaxAbsValue(UInt64): PrivateScope, Public, HideBySig, SpecialName
+    TestParameters(EncryptionParameters, Int32): PrivateScope, Public, HideBySig
+    Simulate(EncryptionParameters): PrivateScope, Public, HideBySig
+    Reset(): PrivateScope, Public, HideBySig
+    SetFresh(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.ChooserEvaluator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    MultiplyMany(List`1, Int32): PrivateScope, Public, HideBySig
+    Add(ChooserPoly, ChooserPoly): PrivateScope, Public, HideBySig
+    AddMany(List`1): PrivateScope, Public, HideBySig
+    Sub(ChooserPoly, ChooserPoly): PrivateScope, Public, HideBySig
+    Multiply(ChooserPoly, ChooserPoly): PrivateScope, Public, HideBySig
+    Square(ChooserPoly): PrivateScope, Public, HideBySig
+    Relinearize(ChooserPoly, Int32): PrivateScope, Public, HideBySig
+    MultiplyPlain(ChooserPoly, ChooserPoly): PrivateScope, Public, HideBySig
+    MultiplyPlain(ChooserPoly, Int32, UInt64): PrivateScope, Public, HideBySig
+    AddPlain(ChooserPoly, ChooserPoly): PrivateScope, Public, HideBySig
+    AddPlain(ChooserPoly, Int32, UInt64): PrivateScope, Public, HideBySig
+    SubPlain(ChooserPoly, ChooserPoly): PrivateScope, Public, HideBySig
+    SubPlain(ChooserPoly, Int32, UInt64): PrivateScope, Public, HideBySig
+    Exponentiate(ChooserPoly, UInt64, Int32): PrivateScope, Public, HideBySig
+    Negate(ChooserPoly): PrivateScope, Public, HideBySig
+    SelectParameters(List`1, Int32, Double, Dictionary`2, EncryptionParameters): PrivateScope, Public, HideBySig
+    SelectParameters(List`1, Int32, EncryptionParameters): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.ChooserEncoder: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(UInt64): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    UInt64 Base 'get ' : 
+  Methods:
+    Encode(UInt32): PrivateScope, Public, HideBySig
+    Encode(Int32): PrivateScope, Public, HideBySig
+    Encode(BigUInt, ChooserPoly): PrivateScope, Public, HideBySig
+    Encode(BigUInt): PrivateScope, Public, HideBySig
+    Encode(Int64, ChooserPoly): PrivateScope, Public, HideBySig
+    Encode(Int64): PrivateScope, Public, HideBySig
+    Encode(UInt64, ChooserPoly): PrivateScope, Public, HideBySig
+    Encode(UInt64): PrivateScope, Public, HideBySig
+    get_Base(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.ChooserEncryptor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Encrypt(ChooserPoly): PrivateScope, Public, HideBySig
+    Encrypt(ChooserPoly, ChooserPoly): PrivateScope, Public, HideBySig
+    Decrypt(ChooserPoly): PrivateScope, Public, HideBySig
+    Decrypt(ChooserPoly, ChooserPoly): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.SecretKey: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.SecretKey): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.Tuple`4[System.UInt64,System.UInt64,System.UInt64,System.UInt64] HashBlock 'get ' : 
+    Microsoft.Research.SEAL.BigPoly Data 'get ' : 
+  Methods:
+    Set(SecretKey): PrivateScope, Public, HideBySig
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    Save(Stream): PrivateScope, Public, HideBySig
+    Load(Stream): PrivateScope, Public, HideBySig
+    get_HashBlock(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.Decryptor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.Decryptor): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SEALContext, Microsoft.Research.SEAL.SecretKey): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Decrypt(Ciphertext, Plaintext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Decrypt(Ciphertext, Plaintext): PrivateScope, Public, HideBySig
+    InvariantNoiseBudget(Ciphertext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    InvariantNoiseBudget(Ciphertext): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.DefaultParams: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Properties:
+    Int32 DBCmin 'get ' : 
+    Int32 DBCmax 'get ' : 
+  Methods:
+    CoeffModulus128(Int32): PrivateScope, Public, Static, HideBySig
+    CoeffModulus192(Int32): PrivateScope, Public, Static, HideBySig
+    CoeffModulus256(Int32): PrivateScope, Public, Static, HideBySig
+    SmallMods60Bit(Int32): PrivateScope, Public, Static, HideBySig
+    SmallMods50Bit(Int32): PrivateScope, Public, Static, HideBySig
+    SmallMods40Bit(Int32): PrivateScope, Public, Static, HideBySig
+    SmallMods30Bit(Int32): PrivateScope, Public, Static, HideBySig
+    get_DBCmax(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_DBCmin(): PrivateScope, Public, Static, HideBySig, SpecialName
+Class Microsoft.Research.SEAL.PublicKey: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.PublicKey): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.Tuple`4[System.UInt64,System.UInt64,System.UInt64,System.UInt64] HashBlock 'get ' : 
+    Microsoft.Research.SEAL.BigPolyArray Data 'get ' : 
+  Methods:
+    Set(PublicKey): PrivateScope, Public, HideBySig
+    get_Data(): PrivateScope, Public, HideBySig, SpecialName
+    Save(Stream): PrivateScope, Public, HideBySig
+    Load(Stream): PrivateScope, Public, HideBySig
+    get_HashBlock(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.Encryptor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.Encryptor): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SEALContext, Microsoft.Research.SEAL.PublicKey): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Encrypt(Plaintext, Ciphertext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Encrypt(Plaintext, Ciphertext): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.KeyGenerator: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.SEALContext, Microsoft.Research.SEAL.SecretKey, Microsoft.Research.SEAL.PublicKey): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SEALContext): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Microsoft.Research.SEAL.SecretKey SecretKey 'get ' : 
+    Microsoft.Research.SEAL.PublicKey PublicKey 'get ' : 
+  Methods:
+    get_PublicKey(): PrivateScope, Public, HideBySig, SpecialName
+    get_SecretKey(): PrivateScope, Public, HideBySig, SpecialName
+    GenerateEvaluationKeys(Int32, EvaluationKeys): PrivateScope, Public, HideBySig
+    GenerateEvaluationKeys(Int32, Int32, EvaluationKeys): PrivateScope, Public, HideBySig
+    GenerateGaloisKeys(Int32, List`1, GaloisKeys): PrivateScope, Public, HideBySig
+    GenerateGaloisKeys(Int32, GaloisKeys): PrivateScope, Public, HideBySig
+    GetGenerator(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.PolyCRTBuilder: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Microsoft.Research.SEAL.PolyCRTBuilder): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Microsoft.Research.SEAL.SEALContext): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Int32 SlotCount 'get ' : 
+  Methods:
+    Compose(Plaintext): PrivateScope, Public, HideBySig
+    Compose(Plaintext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Compose(List`1, Plaintext): PrivateScope, Public, HideBySig
+    Compose(List`1, Plaintext): PrivateScope, Public, HideBySig
+    Decompose(Plaintext): PrivateScope, Public, HideBySig
+    Decompose(Plaintext, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Decompose(Plaintext, List`1, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Decompose(Plaintext, List`1, MemoryPoolHandle): PrivateScope, Public, HideBySig
+    Decompose(Plaintext, List`1): PrivateScope, Public, HideBySig
+    Decompose(Plaintext, List`1): PrivateScope, Public, HideBySig
+    get_SlotCount(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Microsoft.Research.SEAL.Utilities: AutoLayout, AnsiClass, Class, Public, Abstract, Sealed, BeforeFieldInit
+  Methods:
+    PolyInftyNorm(BigPoly): PrivateScope, Public, Static, HideBySig
+    PolyInftyNormCoeffmod(BigPoly, BigUInt, MemoryPoolHandle): PrivateScope, Public, Static, HideBySig
+    PolyInftyNormCoeffmod(BigPoly, BigUInt): PrivateScope, Public, Static, HideBySig
+    ExponentiateUIntMod(BigUInt, BigUInt, BigUInt, MemoryPoolHandle): PrivateScope, Public, Static, HideBySig
+    ExponentiateUIntMod(BigUInt, BigUInt, BigUInt): PrivateScope, Public, Static, HideBySig
+    ExponentiateUIntMod(BigUInt, BigUInt, BigUInt, BigUInt, MemoryPoolHandle): PrivateScope, Public, Static, HideBySig
+    ExponentiateUIntMod(BigUInt, BigUInt, BigUInt, BigUInt): PrivateScope, Public, Static, HideBySig
+    ExponentiatePolyPolymodCoeffmod(BigPoly, BigUInt, BigPoly, BigUInt, MemoryPoolHandle): PrivateScope, Public, Static, HideBySig
+    ExponentiatePolyPolymodCoeffmod(BigPoly, BigUInt, BigPoly, BigUInt): PrivateScope, Public, Static, HideBySig
+    ExponentiatePolyPolymodCoeffmod(BigPoly, BigUInt, BigPoly, BigUInt, BigPoly, MemoryPoolHandle): PrivateScope, Public, Static, HideBySig
+    ExponentiatePolyPolymodCoeffmod(BigPoly, BigUInt, BigPoly, BigUInt, BigPoly): PrivateScope, Public, Static, HideBySig
+    PolyEvalPoly(BigPoly, BigPoly, MemoryPoolHandle): PrivateScope, Public, Static, HideBySig
+    PolyEvalPoly(BigPoly, BigPoly): PrivateScope, Public, Static, HideBySig
+    PolyEvalPoly(BigPoly, BigPoly, BigPoly, MemoryPoolHandle): PrivateScope, Public, Static, HideBySig
+    PolyEvalPoly(BigPoly, BigPoly, BigPoly): PrivateScope, Public, Static, HideBySig
+    PolyEvalPolyPolymodCoeffmod(BigPoly, BigPoly, BigPoly, BigUInt, MemoryPoolHandle): PrivateScope, Public, Static, HideBySig
+    PolyEvalPolyPolymodCoeffmod(BigPoly, BigPoly, BigPoly, BigUInt): PrivateScope, Public, Static, HideBySig
+    PolyEvalPolyPolymodCoeffmod(BigPoly, BigPoly, BigPoly, BigUInt, BigPoly, MemoryPoolHandle): PrivateScope, Public, Static, HideBySig
+    PolyEvalPolyPolymodCoeffmod(BigPoly, BigPoly, BigPoly, BigUInt, BigPoly): PrivateScope, Public, Static, HideBySig
+    PolyEvalUIntMod(BigPoly, BigUInt, BigUInt, MemoryPoolHandle): PrivateScope, Public, Static, HideBySig
+    PolyEvalUIntMod(BigPoly, BigUInt, BigUInt): PrivateScope, Public, Static, HideBySig
+    PolyEvalUIntMod(BigPoly, BigUInt, BigUInt, BigUInt, MemoryPoolHandle): PrivateScope, Public, Static, HideBySig
+    PolyEvalUIntMod(BigPoly, BigUInt, BigUInt, BigUInt): PrivateScope, Public, Static, HideBySig
