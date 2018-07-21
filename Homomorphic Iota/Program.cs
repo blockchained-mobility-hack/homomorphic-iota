@@ -25,12 +25,20 @@ namespace Homomorphic_Iota
                 var startLat = positionLat + finder.Length;
                 var latString = line.Substring(startLat, line.Length-1- startLat).Replace("\"", string.Empty).Trim();
 
-                double lon1 = double.Parse(lonString);
-                double lat1 = double.Parse(latString);
+                Position position = new Position
+                {
+                    Lon = double.Parse(lonString),
+                    Lat = double.Parse(latString)
+                };
 
-                
-                homomorphic.Do(lon1,lat1, out MemoryStream encryptedLon, out MemoryStream encryptedLat);
-                
+                homomorphic.EncryptValues(position, out PositionEncrypted positionEncrypted);
+
+                MemoryStream encryptedLon = new MemoryStream();
+                positionEncrypted.Lon.Save(encryptedLon);
+
+                MemoryStream encryptedLat = new MemoryStream();
+                positionEncrypted.Lat.Save(encryptedLat);
+
                 //File.Delete(Path.Combine(basePath, destinationFile));
                 File.AppendAllText(Path.Combine(basePath, destinationFile), $"lon: {Environment.NewLine}");
                 AppendAllBytes(Path.Combine(basePath, destinationFile), encryptedLon.ToArray());
