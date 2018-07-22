@@ -28,8 +28,8 @@ namespace Homomorphic_Iota
 
                 Position position = new Position
                 {
-                    Lon = double.Parse(lonString),
-                    Lat = double.Parse(latString)
+                    Lon = double.Parse(lonString.Replace(".",",")),
+                    Lat = double.Parse(latString.Replace(".", ","))
                 };
 
                 homomorphic.EncryptValues(position, out PositionEncrypted positionEncrypted);

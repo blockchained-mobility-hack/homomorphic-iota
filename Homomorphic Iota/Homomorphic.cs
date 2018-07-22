@@ -128,7 +128,6 @@ namespace Homomorphic_Iota
             Plaintext testPlan = new Plaintext();
             decryptor.Decrypt(positionEncrypted.Lon, testPlan);
 
-
             Plaintext plainResultLon = new Plaintext();
             Plaintext plainResultLat = new Plaintext();
             decryptor.Decrypt(positionEncrypted.Lon, plainResultLon);
@@ -149,30 +148,23 @@ namespace Homomorphic_Iota
 
         private PositionEncrypted GetFromIota()
         {
-            Position dummy = new Position
-            {
-                Lon = 11.674681,
-                Lat = 48.192192
-            };
+            //Position dummy = new Position
+            //{
+            //    Lon = 11.674681,
+            //    Lat = 48.192192
+            //};
 
-            var encoded = GetEncodedPosition(dummy);
-            var encryptor = new Encryptor(GetContext(), GetPublicKey());
-            PositionEncrypted encryptedDummy = GetEncrpytedPosition(encoded, encryptor);
+            //var encoded = GetEncodedPosition(dummy);
+            //var encryptor = new Encryptor(GetContext(), GetPublicKey());
+            //PositionEncrypted encryptedDummy = GetEncrpytedPosition(encoded, encryptor);
 
-            return encryptedDummy;
-
-            const string address = "IOTAFFBLOCKCHAINEDMOBILITYHACKATHONTHEBLOCKCHAINEDMOBILITYHACKATHONTHEBLOCKCHAINE";
+            //return encryptedDummy;
+            const string address = "IOTAFFFBLOCKCHAINEDMOBILITYHACKATHONTHEBLOCKCHAINEDMOBILITYHACKATHONTHEBLOCKCHAIN";
 
             IotaHelperWithSpecialPower iotaHelper = new IotaHelperWithSpecialPower();
             PositionEncrypted encrypted = iotaHelper.GetPosition(address);
 
             return encrypted;
-
-            //TransactionHashList transactions = repository.FindTransactionsByAddresses(new List<Address> {new Address(address)});
-
-            //var transactionsTrytes = repository.GetTrytes(transactions.Hashes).First();
-            //Hash hash = new Hash(transactions.Hashes[0].Value);
-            //var transaction = Transaction.FromTrytes(transactionsTrytes, hash);
         }
     }
 }
