@@ -81,12 +81,12 @@
             // 
             // lblFound
             // 
-            this.lblFound.AutoSize = true;
-            this.lblFound.Location = new System.Drawing.Point(187, 13);
+            this.lblFound.Location = new System.Drawing.Point(196, 5);
             this.lblFound.Name = "lblFound";
-            this.lblFound.Size = new System.Drawing.Size(50, 20);
+            this.lblFound.Size = new System.Drawing.Size(232, 36);
             this.lblFound.TabIndex = 6;
             this.lblFound.Text = "found";
+            this.lblFound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // search
             // 
