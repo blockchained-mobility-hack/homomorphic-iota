@@ -19,32 +19,6 @@ namespace Homomorphic_Iota
 
             PositionEncoded positionEncoded = GetEncodedPosition(position);
             positionEncrypted = GetEncrpytedPosition(positionEncoded, encryptor);
-
-            return;
-
-            var plainResult = new Plaintext();
-            Console.Write("Decrypting result: ");
-
-
-            //Ciphertext ziv = new Ciphertext();
-            var dataStream = new StreamReader(Path.Combine(Environment.CurrentDirectory, "..", "..", "data"));
-            string testString = dataStream.ReadToEnd();
-            Plaintext plainencata = new Plaintext("FFx^2047 + FFx^2045 + FFx^2043 + FFx^2041 + FFx^2040 + FFx^2038 + FFx^2036 + FFx^2035 + FFx^2034 + FFx^2033 + FFx^2031 + FFx^2029 + 1x^3 + 1x^1 + 1");
-            //plainencata.Load(dataStream.BaseStream);
-
-            //ziv.Load(dataStream.BaseStream);
-
-            //double latte = encoder.Decode(plainencata);
-            ////decryptor.Decrypt(ziv, plainResult);
-            ////decryptor.Decrypt(encrypted1, plainResult);
-            //Console.WriteLine($"Done: {plainResult}");
-
-            /*
-            Print the result plaintext polynomial.
-            */
-            Console.WriteLine($"Plaintext polynomial: {plainResult}");
-
-            GC.Collect();
         }
 
         private PublicKey GetPublicKey()
@@ -57,8 +31,7 @@ namespace Homomorphic_Iota
 
         private SecretKey GetSecretKey()
         {
-            StreamReader stream;
-            stream = new StreamReader(Path.Combine(_BasePath, "secret.key"));
+            var stream = new StreamReader(Path.Combine(_BasePath, "secret.key"));
             SecretKey secretKey = new SecretKey();
             secretKey.Load(stream.BaseStream);
             return secretKey;
@@ -125,20 +98,16 @@ namespace Homomorphic_Iota
             evaluator.SubPlain(positionEncrypted.Lat, encoded.Lat);
 
             var decryptor = new Decryptor(GetContext(), GetSecretKey());
-            Plaintext testPlan = new Plaintext();
-            decryptor.Decrypt(positionEncrypted.Lon, testPlan);
 
             Plaintext plainResultLon = new Plaintext();
             Plaintext plainResultLat = new Plaintext();
             decryptor.Decrypt(positionEncrypted.Lon, plainResultLon);
             decryptor.Decrypt(positionEncrypted.Lat, plainResultLat);
 
-            var value = decryptor.InvariantNoiseBudget(positionEncrypted.Lon);
             var encoder = GetEncoder(GetContext());
             double resultLon = encoder.Decode(plainResultLon);
             double resultLat = encoder.Decode(plainResultLat);
 
-            var willsWissen = encoder.Decode(testPlan);
             var diff = Math.Abs(resultLon) + Math.Abs(resultLat);
             if (diff < 0.007)
                 return true;
@@ -148,17 +117,6 @@ namespace Homomorphic_Iota
 
         private PositionEncrypted GetFromIota()
         {
-            //Position dummy = new Position
-            //{
-            //    Lon = 11.674681,
-            //    Lat = 48.192192
-            //};
-
-            //var encoded = GetEncodedPosition(dummy);
-            //var encryptor = new Encryptor(GetContext(), GetPublicKey());
-            //PositionEncrypted encryptedDummy = GetEncrpytedPosition(encoded, encryptor);
-
-            //return encryptedDummy;
             const string address = "IOTAFFFBLOCKCHAINEDMOBILITYHACKATHONTHEBLOCKCHAINEDMOBILITYHACKATHONTHEBLOCKCHAIN";
 
             IotaHelperWithSpecialPower iotaHelper = new IotaHelperWithSpecialPower();

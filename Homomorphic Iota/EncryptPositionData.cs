@@ -1,10 +1,9 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 
 namespace Homomorphic_Iota
 {
-    public static class Work
+    public static class EncryptPositionData
     {
         public static void Main()
         {
@@ -52,25 +51,7 @@ namespace Homomorphic_Iota
 
                 File.AppendAllText(Path.Combine(basePath, destinationFile), toWriteFinal);
 
-                //File.Delete(Path.Combine(basePath, destinationFile));
-                //File.AppendAllText(Path.Combine(basePath, destinationFile), $"lon: {Environment.NewLine}");
-                //AppendAllBytes(Path.Combine(basePath, destinationFile), encryptedLon.ToArray());
-                //File.AppendAllText(Path.Combine(basePath, destinationFile), Environment.NewLine);
-                //File.AppendAllText(Path.Combine(basePath, destinationFile), $"lat: {Environment.NewLine}");
-                //AppendAllBytes(Path.Combine(basePath, destinationFile), encryptedLat.ToArray());
-                //File.AppendAllText(Path.Combine(basePath, destinationFile), $"{Environment.NewLine}");
-
                 break;
-            }
-        }
-
-        public static void AppendAllBytes(string path, byte[] bytes)
-        {
-            //argument-checking here.
-
-            using (var stream = new FileStream(path, FileMode.Append))
-            {
-                stream.Write(bytes, 0, bytes.Length);
             }
         }
     }

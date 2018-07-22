@@ -23,6 +23,7 @@ namespace Homomorphic_Iota
         {
             int depth = 3;
             int minWeightMagnitude = 9;
+            PositionEncrypted positionEncrypted = new PositionEncrypted();
             try
             {
                 TransactionHashList transactionsByAdress =
@@ -48,20 +49,22 @@ namespace Homomorphic_Iota
                 string fertisch = TrytesToString(combined);
                 string[] lines = fertisch.Split(new[] {"#"},StringSplitOptions.None);
 
-                PositionEncrypted positionEncrypted = new PositionEncrypted();
+                positionEncrypted = new PositionEncrypted();
                 positionEncrypted.Lon = new Ciphertext();
                 positionEncrypted.Lon.Load(new MemoryStream(Convert.FromBase64String(lines[0])));
 
                 positionEncrypted.Lat = new Ciphertext();
                 positionEncrypted.Lat.Load(new MemoryStream(Convert.FromBase64String(lines[1])));
 
-                return positionEncrypted;
+                
             }
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
-                throw;
+                //throw;
             }
+
+            return positionEncrypted;
         }
 
         public static string TrytesToString(string inputTrytes)
@@ -71,7 +74,6 @@ namespace Homomorphic_Iota
             for (var i = 0; i < inputTrytes.Length - 1; i += 2)
             {
                 // get a trytes pair
-
                 var firstValue = TryteToDecimal(inputTrytes[i]);
                 var secondValue = TryteToDecimal(inputTrytes[i + 1]);
                 var decimalValue = firstValue + secondValue * 27;
