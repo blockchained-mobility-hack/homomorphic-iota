@@ -72,6 +72,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Homomorphic.cs" />
+    <Compile Include="IotaHelperWithSpecialPower.cs" />
     <Compile Include="PositionEncoded.cs" />
     <Compile Include="PositionEncrypted.cs" />
     <Compile Include="Position.cs" />

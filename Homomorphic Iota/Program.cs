@@ -12,6 +12,9 @@ namespace Homomorphic_Iota
         [STAThread]
         static void Main()
         {
+            //Work.Main();
+            //return;
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

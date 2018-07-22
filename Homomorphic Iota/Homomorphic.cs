@@ -104,7 +104,7 @@ namespace Homomorphic_Iota
             return encoder;
         }
 
-        private static SEALContext GetContext()
+        private SEALContext GetContext()
         {
             var parms = new EncryptionParameters();
             parms.PolyModulus = "1x^2048 + 1";
@@ -119,13 +119,16 @@ namespace Homomorphic_Iota
             var encoded = GetEncodedPosition(searchPosition);
             var evaluator = new Evaluator(GetContext());
 
-            //Ciphertext chainText = new Ciphertext();
             PositionEncrypted positionEncrypted = GetFromIota();
 
             evaluator.SubPlain(positionEncrypted.Lon, encoded.Lon);
             evaluator.SubPlain(positionEncrypted.Lat, encoded.Lat);
 
             var decryptor = new Decryptor(GetContext(), GetSecretKey());
+            Plaintext testPlan = new Plaintext();
+            decryptor.Decrypt(positionEncrypted.Lon, testPlan);
+
+
             Plaintext plainResultLon = new Plaintext();
             Plaintext plainResultLat = new Plaintext();
             decryptor.Decrypt(positionEncrypted.Lon, plainResultLon);
@@ -136,6 +139,7 @@ namespace Homomorphic_Iota
             double resultLon = encoder.Decode(plainResultLon);
             double resultLat = encoder.Decode(plainResultLat);
 
+            var willsWissen = encoder.Decode(testPlan);
             var diff = Math.Abs(resultLon) + Math.Abs(resultLat);
             if (diff < 0.007)
                 return true;
@@ -153,7 +157,15 @@ namespace Homomorphic_Iota
 
             var encoded = GetEncodedPosition(dummy);
             var encryptor = new Encryptor(GetContext(), GetPublicKey());
-            PositionEncrypted encrypted = GetEncrpytedPosition(encoded, encryptor);
+            PositionEncrypted encryptedDummy = GetEncrpytedPosition(encoded, encryptor);
+
+            return encryptedDummy;
+
+            const string address = "IOTAFFBLOCKCHAINEDMOBILITYHACKATHONTHEBLOCKCHAINEDMOBILITYHACKATHONTHEBLOCKCHAINE";
+
+            IotaHelperWithSpecialPower iotaHelper = new IotaHelperWithSpecialPower();
+            PositionEncrypted encrypted = iotaHelper.GetPosition(address);
+
             return encrypted;
 
             //TransactionHashList transactions = repository.FindTransactionsByAddresses(new List<Address> {new Address(address)});

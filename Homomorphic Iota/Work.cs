@@ -1,11 +1,12 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 
 namespace Homomorphic_Iota
 {
-    public class Work
+    public static class Work
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             string destinationFile = "result.txt";
             string basePath = Path.Combine(Environment.CurrentDirectory, "..", "..");
@@ -39,13 +40,25 @@ namespace Homomorphic_Iota
                 MemoryStream encryptedLat = new MemoryStream();
                 positionEncrypted.Lat.Save(encryptedLat);
 
+                string lon64 = Convert.ToBase64String(encryptedLon.ToArray());
+                string lat64 = Convert.ToBase64String(encryptedLat.ToArray());
+
+                string toWrite = lon64 + "#" + lat64;
+                string toWriteFinal = toWrite;
+                for (int i = 0; i < 1500; i++)
+                {
+                    toWriteFinal = toWriteFinal + "#";
+                }
+
+                File.AppendAllText(Path.Combine(basePath, destinationFile), toWriteFinal);
+
                 //File.Delete(Path.Combine(basePath, destinationFile));
-                File.AppendAllText(Path.Combine(basePath, destinationFile), $"lon: {Environment.NewLine}");
-                AppendAllBytes(Path.Combine(basePath, destinationFile), encryptedLon.ToArray());
-                File.AppendAllText(Path.Combine(basePath, destinationFile), Environment.NewLine);
-                File.AppendAllText(Path.Combine(basePath, destinationFile), $"lat: {Environment.NewLine}");
-                AppendAllBytes(Path.Combine(basePath, destinationFile), encryptedLat.ToArray());
-                File.AppendAllText(Path.Combine(basePath, destinationFile), $"{Environment.NewLine}");
+                //File.AppendAllText(Path.Combine(basePath, destinationFile), $"lon: {Environment.NewLine}");
+                //AppendAllBytes(Path.Combine(basePath, destinationFile), encryptedLon.ToArray());
+                //File.AppendAllText(Path.Combine(basePath, destinationFile), Environment.NewLine);
+                //File.AppendAllText(Path.Combine(basePath, destinationFile), $"lat: {Environment.NewLine}");
+                //AppendAllBytes(Path.Combine(basePath, destinationFile), encryptedLat.ToArray());
+                //File.AppendAllText(Path.Combine(basePath, destinationFile), $"{Environment.NewLine}");
 
                 break;
             }
