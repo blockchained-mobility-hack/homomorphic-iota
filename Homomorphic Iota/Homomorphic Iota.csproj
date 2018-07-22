@@ -90,6 +90,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="longlat_data.xml" />
+    <Content Include="result.txt" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
